@@ -1,4 +1,4 @@
-### 🗂️ Project Setup
+🗂️ Project Setup
 
 🧾 **Solution File**:  
 `UnitTestingMethods.sln` – Entry point for the entire solution, linking all projects.
