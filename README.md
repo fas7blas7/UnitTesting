@@ -61,11 +61,60 @@ public class CalculateTests
 }
 
 ```
+✅ 2️⃣ FactorialTests 🧪
+Namespace: TestApp.UnitTests
+📌 Description:
+Unit tests for a method CalculateFactorial(int number) in a Factorial class.
+Covers:
+
+Factorial of 0 returns 1
+
+Factorial of a positive number (e.g., 5) returns the correct result
+
+🧪 Test Code:
+
+```csharp
+using NUnit.Framework;
+
+namespace TestApp.UnitTests;
+
+public class FactorialTests
+{
+    [Test]
+    public void Test_CalculateFactorial_InputZero_ReturnsOne()
+    {
+        //Arrange
+        int inputNumber = 0;
+        int expected = 1;
+
+        //Act
+        int result = Factorial.CalculateFactorial(inputNumber);
+
+        //Assert
+        Assert.AreEqual(expected, result);
+    }
+
+    [Test]
+    public void Test_CalculateFactorial_InputPositiveNumber_ReturnsCorrectFactorial()
+    {
+        //Arrange
+        int inputNumber = 5;
+        int expected = 120;
+
+        //Act
+        int result = Factorial.CalculateFactorial(inputNumber);
+
+        //Assert
+        Assert.AreEqual(expected, result);
+    }
+}
+
+```
 📅 Commit Progress Update:
 
-📅 Current Progress: 454 commits
+📅 Current Progress: 456 commits
 📊 Progress Bar:
-█████████████████████████████████████████████████░90.8% (454/500)
+██████████████████████████████████████████████████▎91.2% (456/500)
 
 📌 Milestones:
 ✅ 100 commits
