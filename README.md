@@ -110,11 +110,60 @@ public class FactorialTests
 }
 
 ```
-📅 Commit Progress Update:
+✅ 3️⃣ GradesTests 📝
+Namespace: TestApp.UnitTests
+📌 Description:
+Unit tests for the GradeAsWords(double grade) method in the Grades class.
+Covers both valid and invalid inputs:
 
-📅 Current Progress: 456 commits
+Valid grades return their descriptive strings (e.g. "Good", "Excellent")
+
+Edge cases (grades outside the valid 2.00–6.00 range) return "Invalid!"
+
+🧪 Test Code:
+
+```csharp
+
+using NUnit.Framework;
+
+namespace TestApp.UnitTests;
+
+public class GradesTests
+{
+    [TestCase(2.60, "Fail")]
+    [TestCase(3.80, "Good")]
+    [TestCase(4.20, "Good")]
+    [TestCase(4.90, "Very Good")]
+    [TestCase(5.30, "Very Good")]
+    [TestCase(5.60, "Excellent")]
+    public void Test_GradeAsWords_ReturnsCorrectString(double grade, string expected)
+    {
+        // Act
+        string actual = Grades.GradeAsWords(grade);
+
+        // Assert
+        Assert.AreEqual(expected, actual);
+    }
+
+    [TestCase(1.00, "Invalid!")]
+    [TestCase(1.99, "Invalid!")]
+    [TestCase(6.01, "Invalid!")]
+    [TestCase(7.00, "Invalid!")]
+    public void Test_GradeAsWords_ReturnsCorrectString_EdgeCases(double grade, string expected)
+    {
+        // Act
+        string actual = Grades.GradeAsWords(grade);
+
+        // Assert
+        Assert.AreEqual(expected, actual);
+    }
+}
+
+```
+📅 Commit Progress Update:
+📅 Current Progress: 458 commits
 📊 Progress Bar:
-██████████████████████████████████████████████████▎91.2% (456/500)
+██████████████████████████████████████████████████▍91.6% (458/500)
 
 📌 Milestones:
 ✅ 100 commits
