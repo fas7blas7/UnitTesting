@@ -160,10 +160,87 @@ public class GradesTests
 }
 
 ```
+✅ 4️⃣ TriangleTests 🛆
+Namespace: TestApp.UnitTests
+📌 Description:
+Unit tests for the PrintTriangle(int n) method in the Triangle class.
+Covers:
+
+Base case where size is 0 (empty result)
+
+Size 3 – standard small triangle
+
+Size 5 – symmetrical full triangle
+
+🧪 Test Code:
+
+```csharp
+
+using NUnit.Framework;
+using System;
+
+namespace TestApp.UnitTests;
+
+public class TriangleTests
+{
+    [Test]
+    public void Test_Triangle_OutputMatchesExpected_Size0()
+    {
+        //Arrange
+        int inputNumber = 0;
+
+        //Act 
+        string result = Triangle.PrintTriangle(inputNumber);
+
+        //Assert
+        Assert.IsEmpty(result);
+    }
+
+    [Test]
+    public void Test_Triangle_OutputMatchesExpected_Size3()
+    {
+        //Arrange
+        int inputNumber = 3;
+        string expected =    $"1" +
+        $"{Environment.NewLine}1 2" +
+        $"{Environment.NewLine}1 2 3" +
+        $"{Environment.NewLine}1 2" +
+        $"{Environment.NewLine}1";
+
+        //Act 
+        string result = Triangle.PrintTriangle(inputNumber);
+
+        //Assert
+        Assert.That(result, Is.EqualTo(expected));
+    }
+
+    [Test]
+    public void Test_Triangle_OutputMatchesExpected_Size5()
+    {
+        //Arrange
+        int inputNumber = 5;
+        string expected =    $"1" +
+        $"{Environment.NewLine}1 2" +
+        $"{Environment.NewLine}1 2 3" +
+        $"{Environment.NewLine}1 2 3 4" +
+        $"{Environment.NewLine}1 2 3 4 5" +
+        $"{Environment.NewLine}1 2 3 4" +
+        $"{Environment.NewLine}1 2 3" +
+        $"{Environment.NewLine}1 2" +
+        $"{Environment.NewLine}1";
+
+        //Act 
+        string result = Triangle.PrintTriangle(inputNumber);
+
+        //Assert
+        Assert.That(result, Is.EqualTo(expected));
+    }
+}
+```
 📅 Commit Progress Update:
-📅 Current Progress: 458 commits
+📅 Current Progress: 460 commits
 📊 Progress Bar:
-██████████████████████████████████████████████████▍91.6% (458/500)
+█████████████████████████████████████████████████████ 92.0% (460/500)
 
 📌 Milestones:
 ✅ 100 commits
@@ -171,6 +248,3 @@ public class GradesTests
 ✅ 300 commits
 ✅ 400 commits
 🔲 500 commits (🎉)
-
-🎯 Commit Progress Tracker
-🚀 Goal: 500 commits in 2025
