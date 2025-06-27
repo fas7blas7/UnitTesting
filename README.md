@@ -237,14 +237,80 @@ public class TriangleTests
     }
 }
 ```
+✅ 5️⃣ StringReverseTests 🔁
+Namespace: TestApp.UnitTests
+📌 Description:
+Unit tests for the Reverse(string input) method in the StringReverse class.
+Covers:
+
+Empty string input returns empty string
+
+Single character input returns the same character
+
+Normal string returns reversed version
+
+🧪 Test Code:
+
+```csharp
+
+using NUnit.Framework;
+
+namespace TestApp.UnitTests;
+
+public class StringReverseTests
+{
+    // TODO: finish test
+    [Test]
+    public void Test_Reverse_WhenGivenEmptyString_ReturnsEmptyString()
+    {
+        // Arrange
+        string input = string.Empty;
+        string expected = string.Empty;
+
+        // Act
+        string actual = StringReverse.Reverse(input);
+
+        // Assert
+        Assert.AreEqual(expected, actual);
+    }
+
+    [Test]
+    public void Test_Reverse_WhenGivenSingleCharacterString_ReturnsSameCharacter()
+    {
+        // Arrange
+        string input = "A";
+        string expected = "A";
+
+        // Act
+        string actual = StringReverse.Reverse(input);
+
+        // Assert
+        Assert.AreEqual(expected, actual);
+    }
+
+    [Test]
+    public void Test_Reverse_WhenGivenNormalString_ReturnsReversedString()
+    {
+        // Arrange
+        string input = "Hello";
+        string expected = "olleH";
+
+        // Act
+        string actual = StringReverse.Reverse(input);
+
+        // Assert
+        Assert.AreEqual(expected, actual);
+    }
+}
+```
 📅 Commit Progress Update:
-📅 Current Progress: 460 commits
+📅 Current Progress: 462 commits
 📊 Progress Bar:
-█████████████████████████████████████████████████████ 92.0% (460/500)
+██████████████████████████████████████████████████████▌ 92.4% (462/500)
 
 📌 Milestones:
 ✅ 100 commits
 ✅ 200 commits
 ✅ 300 commits
 ✅ 400 commits
-🔲 500 commits (🎉)
+🔲 500 commits (🎉 soon!)
